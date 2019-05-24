@@ -1,10 +1,9 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "8dba8830323d39d4a4c6c258ac48e5fd",
     "content-hash": "978ce928cf3f05906f2d76afd783ecbb",
     "packages": [
         {
@@ -13,8 +12,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/autoloader",
-                "reference": "580e5e5a37d4dfd65f9ceec089367c701cbf44f0",
-                "shasum": null
+                "reference": "580e5e5a37d4dfd65f9ceec089367c701cbf44f0"
             },
             "type": "library",
             "autoload": {
@@ -36,8 +34,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/logo",
-                "reference": "30319e40b252e1582f5a225763155f3e9185d48a",
-                "shasum": null
+                "reference": "30319e40b252e1582f5a225763155f3e9185d48a"
             },
             "type": "library",
             "autoload": {
@@ -171,7 +168,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2018-08-27 06:10:37"
+            "time": "2018-08-27T06:10:37+00:00"
         }
     ],
     "packages-dev": [
@@ -239,7 +236,7 @@
                 "stylecheck",
                 "tests"
             ],
-            "time": "2018-10-26 13:21:45"
+            "time": "2018-10-26T13:21:45+00:00"
         },
         {
             "name": "phpcompatibility/php-compatibility",
@@ -297,7 +294,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-12-30 23:16:27"
+            "time": "2018-12-30T23:16:27+00:00"
         },
         {
             "name": "phpcompatibility/phpcompatibility-paragonie",
@@ -347,7 +344,7 @@
                 "polyfill",
                 "standards"
             ],
-            "time": "2018-12-16 19:10:44"
+            "time": "2018-12-16T19:10:44+00:00"
         },
         {
             "name": "phpcompatibility/phpcompatibility-wp",
@@ -397,7 +394,7 @@
                 "standards",
                 "wordpress"
             ],
-            "time": "2018-10-07 18:31:37"
+            "time": "2018-10-07T18:31:37+00:00"
         },
         {
             "name": "sirbrillig/phpcs-variable-analysis",
@@ -444,7 +441,7 @@
                 }
             ],
             "description": "A PHPCS sniff to detect problems with variables.",
-            "time": "2019-05-10 21:08:30"
+            "time": "2019-05-10T21:08:30+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -495,7 +492,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2019-04-10 23:49:02"
+            "time": "2019-04-10T23:49:02+00:00"
         },
         {
             "name": "wp-coding-standards/wpcs",
@@ -540,7 +537,7 @@
                 "standards",
                 "wordpress"
             ],
-            "time": "2019-05-21 02:50:00"
+            "time": "2019-05-21T02:50:00+00:00"
         }
     ],
     "aliases": [],
