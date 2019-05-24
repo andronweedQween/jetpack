@@ -4,30 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "978ce928cf3f05906f2d76afd783ecbb",
+    "content-hash": "b1d78a659dc3de59e78971cc4df41a8d",
     "packages": [
-        {
-            "name": "automattic/autoloader",
-            "version": "dev-try/custom-autoloader",
-            "dist": {
-                "type": "path",
-                "url": "./packages/autoloader",
-                "reference": "580e5e5a37d4dfd65f9ceec089367c701cbf44f0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Jetpack\\Autoloader\\": "src"
-                }
-            },
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "description": "An autoloader for Jetpack packages",
-            "transport-options": {
-                "symlink": true
-            }
-        },
         {
             "name": "automattic/jetpack-logo",
             "version": "dev-try/custom-autoloader",
@@ -172,6 +150,28 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "automattic/autoloader",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "./packages/autoloader",
+                "reference": "871c05901512feedd12709b7b4c1fbd76dce70dd"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jetpack\\Autoloader\\": "src"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "An autoloader for Jetpack packages",
+            "transport-options": {
+                "symlink": true
+            }
+        },
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
             "version": "v0.5.0",
@@ -543,8 +543,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "automattic/jetpack-logo": 20,
-        "automattic/autoloader": 20
+        "automattic/jetpack-logo": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
