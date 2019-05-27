@@ -151,6 +151,17 @@ function jetpack_admin_missing_autoloader() { ?>
 	<?php
 }
 
+/**
+ * This is where the loading of Jetpack begins.
+ *
+ * First, we check for our supported version of PHP and load our composer autoloader. If either of these fail,
+ * we "pause" Jetpack by ending the loading process and displaying an admin_notice to inform the site owner.
+ *
+ * After both those things happen successfully, we require the legacy files, then add on to various hooks that we expect
+ * to always run.
+ *
+ * Lastly, we fire Jetpack::init() to fire up the engines.
+ */
 if ( version_compare( phpversion(), JETPACK__MINIMUM_PHP_VERSION, '<' ) ) {
 	if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
 		error_log(
@@ -166,8 +177,13 @@ if ( version_compare( phpversion(), JETPACK__MINIMUM_PHP_VERSION, '<' ) ) {
 	return;
 }
 
-// Load all the packages.
-$jetpack_autoloader = JETPACK__PLUGIN_DIR . '/vendor/autoload.php';
+/**
+ * Load all the packages.
+ *
+ * We want to fail gracefully if `composer install` has not been executed yet, so we are checking for the autoloader.
+ * If the autoloader is not present, let's log the failure, pause Jetpack, and display a nice admin notice.
+ */
+$jetpack_autoloader = JETPACK__PLUGIN_DIR . 'vendor/autoload.php';
 if ( is_readable( $jetpack_autoloader ) ) {
 	require $jetpack_autoloader;
 } else {
@@ -234,6 +250,7 @@ register_deactivation_hook( __FILE__, array( 'Jetpack', 'plugin_deactivation' ) 
 add_action( 'updating_jetpack_version', array( 'Jetpack', 'do_version_bump' ), 10, 2 );
 add_action( 'init', array( 'Jetpack', 'init' ) );
 add_action( 'plugins_loaded', array( 'Jetpack', 'plugin_textdomain' ), 99 );
+add_action( 'plugins_loaded', array( 'Jetpack', 'load_private' ), 99 );
 add_action( 'plugins_loaded', array( 'Jetpack', 'load_modules' ), 100 );
 add_filter( 'jetpack_static_url', array( 'Jetpack', 'staticize_subdomain' ) );
 add_filter( 'is_jetpack_site', '__return_true' );
