@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b1d78a659dc3de59e78971cc4df41a8d",
+    "content-hash": "85a16f3e98cedf3537f070c616d3def7",
     "packages": [
         {
             "name": "automattic/jetpack-logo",
@@ -151,14 +151,20 @@
     ],
     "packages-dev": [
         {
-            "name": "automattic/autoloader",
-            "version": "1.0.0",
+            "name": "automattic/jetpack-autoloader",
+            "version": "dev-try/custom-autoloader",
             "dist": {
                 "type": "path",
                 "url": "./packages/autoloader",
-                "reference": "871c05901512feedd12709b7b4c1fbd76dce70dd"
+                "reference": "51fc3e6830300f3bab8aa1f7944886dabd55c7c1"
             },
-            "type": "library",
+            "require": {
+                "composer-plugin-api": "^1.1"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Jetpack\\Autoloader\\CustomAutoloaderPlugin"
+            },
             "autoload": {
                 "psr-4": {
                     "Jetpack\\Autoloader\\": "src"
@@ -543,7 +549,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "automattic/jetpack-logo": 20
+        "automattic/jetpack-logo": 20,
+        "automattic/jetpack-autoloader": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
