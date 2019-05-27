@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "85a16f3e98cedf3537f070c616d3def7",
+    "content-hash": "4b9e6ea15b5adba648f48e86aca34c78",
     "packages": [
         {
             "name": "automattic/jetpack-logo",
-            "version": "dev-try/custom-autoloader",
+            "version": "1.0.0",
             "dist": {
                 "type": "path",
                 "url": "./packages/logo",
-                "reference": "30319e40b252e1582f5a225763155f3e9185d48a"
+                "reference": "b490a4362ab6850c98434380b55018be09228b1e"
             },
             "type": "library",
             "autoload": {
@@ -152,11 +152,11 @@
     "packages-dev": [
         {
             "name": "automattic/jetpack-autoloader",
-            "version": "dev-try/custom-autoloader",
+            "version": "1.0.0",
             "dist": {
                 "type": "path",
                 "url": "./packages/autoloader",
-                "reference": "51fc3e6830300f3bab8aa1f7944886dabd55c7c1"
+                "reference": "c4ec86abe78e6ccae8eadd99d2f75549485b0d8c"
             },
             "require": {
                 "composer-plugin-api": "^1.1"
@@ -173,7 +173,7 @@
             "license": [
                 "GPL-2.0-or-later"
             ],
-            "description": "An autoloader for Jetpack packages",
+            "description": "Creates a custom autoloader for a plugin or theme.",
             "transport-options": {
                 "symlink": true
             }
@@ -548,10 +548,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "automattic/jetpack-logo": 20,
-        "automattic/jetpack-autoloader": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
